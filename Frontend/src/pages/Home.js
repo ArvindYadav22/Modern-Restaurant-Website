@@ -31,14 +31,14 @@ const Home = () => {
                 <div className="container">
                     <div className="about-content">
                         <div className="about-text">
-                            <h2>Welcome to Gourmet Haven</h2>
+                            <h2>Welcome to Arvind's Cafe</h2>
                             <p>
                                 Indulge in an unforgettable dining experience where culinary artistry meets exceptional service.
                                 Our master chefs craft each dish with passion, using only the finest locally-sourced ingredients
                                 to create flavors that will tantalize your taste buds.
                             </p>
                             <p>
-                                From intimate dinners to grand celebrations, Gourmet Haven provides the perfect ambiance
+                                From intimate dinners to grand celebrations, Arvind's Cafe provides the perfect ambiance
                                 for every occasion. Join us and discover why we're the city's premier destination for fine dining.
                             </p>
                         </div>
