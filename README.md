@@ -1,4 +1,4 @@
-# Gourmet Haven - Restaurant Website
+# Arvind's Cafe
 
 A full-stack restaurant website built with the MERN stack (MongoDB, Express, React, Node.js) featuring a premium UI, online ordering, table reservations, and user authentication.
 
