@@ -45,7 +45,20 @@ const menuItemSchema = new mongoose.Schema({
     prepTime: {
         type: Number,
         default: 20
-    }
+    },
+    quantity: {
+        type: Number,
+        default: 50,
+        min: 0
+    },
+    servingSize: {
+        type: String,
+        default: 'Full Plate'
+    },
+    sizes: [{
+        name: { type: String },
+        price: { type: Number }
+    }]
 }, {
     timestamps: true
 });

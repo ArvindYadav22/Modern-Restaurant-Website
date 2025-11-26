@@ -50,22 +50,22 @@ const Cart = () => {
                             <div key={item._id} className="cart-item glass-card">
                                 <img src={item.image} alt={item.name} />
                                 <div className="cart-item-details">
-                                    <h3>{item.name}</h3>
+                                    <h3>{item.name} <span className="item-size">({item.selectedSize})</span></h3>
                                     <p>{item.description}</p>
-                                    <div className="cart-item-price">${item.price.toFixed(2)}</div>
+                                    <div className="cart-item-price">₹{item.price.toFixed(2)}</div>
                                 </div>
                                 <div className="cart-item-actions">
                                     <div className="quantity-controls">
-                                        <button onClick={() => updateQuantity(item._id, item.quantity - 1)}>-</button>
+                                        <button onClick={() => updateQuantity(item._id, item.selectedSize, item.quantity - 1)}>-</button>
                                         <span>{item.quantity}</span>
-                                        <button onClick={() => updateQuantity(item._id, item.quantity + 1)}>+</button>
+                                        <button onClick={() => updateQuantity(item._id, item.selectedSize, item.quantity + 1)}>+</button>
                                     </div>
                                     <div className="cart-item-total">
-                                        ${(item.price * item.quantity).toFixed(2)}
+                                        ₹{(item.price * item.quantity).toFixed(2)}
                                     </div>
                                     <button
                                         className="btn-remove"
-                                        onClick={() => removeFromCart(item._id)}
+                                        onClick={() => removeFromCart(item._id, item.selectedSize)}
                                     >
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                             <polyline points="3 6 5 6 21 6" />
@@ -81,20 +81,20 @@ const Cart = () => {
                         <h2>Order Summary</h2>
                         <div className="summary-row">
                             <span>Subtotal</span>
-                            <span>${getCartTotal().toFixed(2)}</span>
+                            <span>₹{getCartTotal().toFixed(2)}</span>
                         </div>
                         <div className="summary-row">
                             <span>Delivery Fee</span>
-                            <span>$5.00</span>
+                            <span>₹50.00</span>
                         </div>
                         <div className="summary-row">
-                            <span>Tax (10%)</span>
-                            <span>${(getCartTotal() * 0.1).toFixed(2)}</span>
+                            <span>Tax (5%)</span>
+                            <span>₹{(getCartTotal() * 0.05).toFixed(2)}</span>
                         </div>
                         <div className="summary-divider"></div>
                         <div className="summary-row summary-total">
                             <span>Total</span>
-                            <span>${(getCartTotal() + 5 + getCartTotal() * 0.1).toFixed(2)}</span>
+                            <span>₹{(getCartTotal() + 50 + getCartTotal() * 0.05).toFixed(2)}</span>
                         </div>
                         <button className="btn btn-primary btn-checkout" onClick={handleCheckout}>
                             Proceed to Checkout
