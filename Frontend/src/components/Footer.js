@@ -80,7 +80,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; 2024 Gourmet Haven. All rights reserved.</p>
+                   
                 </div>
             </div>
         </footer>

@@ -119,7 +119,7 @@ The application will open at http://localhost:3000
 
 ```
 restaurant-website/
-├── server/
+├── Backend/
 │   ├── config/
 │   │   └── db.js
 │   ├── models/
@@ -137,7 +137,7 @@ restaurant-website/
 │   ├── .env
 │   ├── server.js
 │   └── package.json
-└── client/
+└── Frontend/
     ├── public/
     │   └── index.html
     ├── src/
@@ -184,10 +184,3 @@ db.users.updateOne(
 - **Responsive**: Mobile-first design with breakpoints
 - **Animations**: Fade-in, slide-in, and hover effects
 
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## License
-
-ISC
